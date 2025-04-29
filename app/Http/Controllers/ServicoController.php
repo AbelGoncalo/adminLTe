@@ -36,4 +36,14 @@ class ServicoController extends Controller
         return view('servicos.edit',compact('servico'));
 
     }
+
+    public function update(int $id, Request $request)
+    {
+
+        $dado = $request->except(['_token','_method']);
+        $servico = Servico::findOrFail($id)->update($dado);
+
+        return redirect()->route('servicos.index');
+
+    }
 }

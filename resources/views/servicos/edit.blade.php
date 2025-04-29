@@ -13,7 +13,8 @@
 
 <div class="container">
 
-    <form action="" method="post">
+    <form action="{{route('servicos.update',$servico->id)}}" method="post">
+        @method('PUT')
        @include('servicos._form')
     </form>
 </div>

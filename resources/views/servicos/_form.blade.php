@@ -14,7 +14,13 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="icone">Ícone</label>
-                                <input value="{{$servico->icone?? ''}}" type="text" class="form-control" name="icone" id="icone" placeholder="Ícone">
+
+                                <select name="icone" id="icone" class="form-control">
+                                    <option value="">Selecione o ícone</option>
+                                    <option value="tw-cleaning-1" {{isset($servico) && $servico->icone ==='tw-cleaning-1'?'selected':''}}>Ícone 1</option>
+                                    <option value="tw-cleaning-2" {{isset($servico) && $servico->icone ==='tw-cleaning-2'?'selected':''}}>Ícone 2</option>
+                                    <option value="tw-cleaning-3" {{isset($servico) && $servico->icone ==='tw-cleaning-3'?'selected':''}}>Ícone 3</option>
+                                </select>
                             </div>
                         </div>
 
