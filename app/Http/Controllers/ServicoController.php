@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Servico;
+use App\Http\Requests\ServicoRequest;
 
 class ServicoController extends Controller
 {
@@ -20,7 +21,7 @@ class ServicoController extends Controller
         return view('servicos.create');
     }
 
-    public function store(Request $request)
+    public function store(ServicoRequest $request)
     {
         $dados = $request->except('_token');
 
@@ -37,7 +38,7 @@ class ServicoController extends Controller
 
     }
 
-    public function update(int $id, Request $request)
+    public function update(int $id, ServicoRequest $request)
     {
 
         $dado = $request->except(['_token','_method']);

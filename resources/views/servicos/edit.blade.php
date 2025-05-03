@@ -11,8 +11,9 @@
 
 @section('content')
 
-<div class="container">
+@include('_mensagem')
 
+<div class="container">
     <form action="{{route('servicos.update',$servico->id)}}" method="post">
         @method('PUT')
        @include('servicos._form')
