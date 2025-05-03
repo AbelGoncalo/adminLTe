@@ -13,11 +13,13 @@
 
     @include('_mensagem')
 
-<div class="container">
+    <div class="container">
 
-    <form action="{{route('servicos.store')}}" method="post">
-        @include('servicos._form')
-    </form>
-</div>
+        <form action="{{route('servicos.store')}}" method="post">
+            @include('servicos._form')
+        </form>
+    </div>
 
 @stop
+
+
