@@ -13,6 +13,12 @@
 
     <div class="container">
 
+        @if(session('mensagem'))
+            <div class="alert alert-success">
+                {{session('mensagem')}}
+            </div>
+        @endif
+
         <table class="table table-striped">
             <thead>
                 <tr>
